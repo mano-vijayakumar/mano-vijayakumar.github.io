@@ -8,7 +8,7 @@ Slug: from-prompts-to-products-beginners-guide-generative-ai
 
 The first time I asked an LLM to explain a bug I'd been stuck on for an hour, and it spotted the problem in seconds, I realized this wasn't just a clever chatbot. It was a new kind of building block.
 
-Most people meet generative AI through a chat window. But the real power shows up when you move from *typing prompts* to *shipping products*. This guide walks through that path step by step, from the basics to something people can actually use.
+Most people meet generative AI through a chat window. But the real power shows up when you move from *typing prompts* to *shipping products*. This guide walks through that path step by steps, from the basics to something people can actually uses.
 
 ## What Is Generative AI, Really?
 
