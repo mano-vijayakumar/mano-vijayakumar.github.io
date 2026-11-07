@@ -1,9 +1,9 @@
-AUTHOR = 'Raja CSP Raman'
-SITENAME = 'RajaCSP'
-SITETITLE = 'RajaCSP'
+AUTHOR = 'Mano'
+SITENAME = 'Mano'
+SITETITLE = 'Mano'
 SITEURL = ""
 PATH = "content"
-TIMEZONE = 'America/Moncton'
+TIMEZONE = 'Asia/kolkata'
 DEFAULT_LANG = 'en'
 THEME = 'theme'
 
@@ -12,7 +12,7 @@ DISABLE_URL_HASH = True
 
 # Copyright
 COPYRIGHT_YEAR = 2026
-COPYRIGHT_NAME = 'Raja CSP Raman'
+COPYRIGHT_NAME = 'Mano'
 
 # Dark mode support
 THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
@@ -45,11 +45,11 @@ MENUITEMS = (
 
 # Social widget
 SOCIAL = (
-    ("github", "https://github.com/rajacsp"),
-    ("linkedin", "https://www.linkedin.com/in/raja-csp-raman/"),
+    ("github", "https://github.com/mano-vijayakumar/manovijayakumar.github.io"),
+    ("linkedin" ,"www.linkedin.com/in/mano-vijayakumar")
     ("substack", "https://articlevil.substack.com/"),
     ("python", "https://rajacsp.github.io/mlnotes/"),
-)
+
 
 DEFAULT_PAGINATION = 10
 
