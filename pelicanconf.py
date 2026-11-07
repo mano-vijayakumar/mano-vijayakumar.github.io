@@ -49,7 +49,7 @@ SOCIAL = (
     ("linkedin" ,"www.linkedin.com/in/mano-vijayakumar")
     ("substack", "https://articlevil.substack.com/"),
     ("python", "https://rajacsp.github.io/mlnotes/"),
-
+)
 
 DEFAULT_PAGINATION = 10
 
