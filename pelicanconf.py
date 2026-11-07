@@ -46,7 +46,7 @@ MENUITEMS = (
 # Social widget
 SOCIAL = (
     ("github", "https://github.com/mano-vijayakumar/manovijayakumar.github.io"),
-    ("linkedin" ,"www.linkedin.com/in/mano-vijayakumar")
+    ("linkedin" ,"www.linkedin.com/in/mano-vijayakumar"),
     ("substack", "https://articlevil.substack.com/"),
     ("python", "https://rajacsp.github.io/mlnotes/"),
 )

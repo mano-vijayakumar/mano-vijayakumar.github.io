@@ -1,3 +1,4 @@
+Title: About
 # About the Blog
 
 Welcome to my blog!
@@ -10,7 +11,7 @@ I'm still learning, exploring, and improving every day. This is a place where I 
 
 # About Me
 
-I'm **Mano.v** — a Computer Science and Engineering student, aspiring software developer, and technology enthusiast.
+I'm **Mano.v** - a Computer Science and Engineering student, aspiring software developer, and technology enthusiast.
 
 I'm currently pursuing my **Bachelor of Engineering in Computer Science and Engineering at K. Ramakrishnan College of Engineering (KRCE)**.
 
@@ -34,8 +35,8 @@ I'm particularly interested in:
 
 I enjoy turning ideas into practical applications. Some of the projects and tools I've worked on include:
 
-- **Employee Leave Management System** – A Python-based application for managing employee leave.
-- **Food Quality Checker System** – A C programming project focused on checking food quality and freshness.
+- **Employee Leave Management System** - A Python-based application for managing employee leave.
+- **Food Quality Checker System** - A C programming project focused on checking food quality and freshness.
 
 I continuously explore new ideas and work on projects that help me improve my development skills.
 
@@ -45,9 +46,9 @@ I'm always interested in expanding my knowledge and learning new technologies.
 
 Some of my learning achievements include:
 
-- Infosys – Basics of Python
-- IBM – Web Development Fundamentals
-- Udemy – Presentation Skills
+- Infosys - Basics of Python
+- IBM - Web Development Fundamentals
+- Udemy - Presentation Skills
 
 I also enjoy participating in technical learning activities, exploring new tools, and improving my programming and problem-solving abilities.
 

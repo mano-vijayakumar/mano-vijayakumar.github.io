@@ -18,10 +18,10 @@ The models behind most text-based tools are **large language models (LLMs)**. At
 
 A few terms you'll see everywhere:
 
-- **Token** — the small chunk of text a model reads and writes. Costs and limits are measured in tokens.
-- **Context window** — how much text the model can consider at once.
-- **Embedding** — a numerical representation of text that captures meaning, so similar ideas sit close together.
-- **Hallucination** — when a model confidently produces something that isn't true.
+- **Token** : the small chunk of text a model reads and writes. Costs and limits are measured in tokens.
+- **Context window** :  how much text the model can consider at once.
+- **Embedding** : a numerical representation of text that captures meaning, so similar ideas sit close together.
+- **Hallucination** : when a model confidently produces something that isn't true.
 
 ## Step 1: Learn to Prompt Well
 
@@ -80,11 +80,11 @@ Start small. An agent with two or three reliable tools beats an ambitious one th
 
 A working demo is not a product. Here's what separates the two:
 
-- **Evaluation** — build a small set of test questions and check answers as you change prompts or models. Without this, you're guessing.
-- **Guardrails** — validate outputs, handle refusals, and decide what happens when the model is wrong.
-- **Cost and latency** — monitor token usage, cache repeated requests, and use smaller models for simple tasks.
-- **User experience** — stream responses, show sources, and make it easy to give feedback.
-- **Privacy and safety** — be careful about what data you send to a model and what it's allowed to do.
+- **Evaluation** : build a small set of test questions and check answers as you change prompts or models. Without this, you're guessing.
+- **Guardrails** : validate outputs, handle refusals, and decide what happens when the model is wrong.
+- **Cost and latency** : monitor token usage, cache repeated requests, and use smaller models for simple tasks.
+- **User experience** : stream responses, show sources, and make it easy to give feedback.
+- **Privacy and safety** : be careful about what data you send to a model and what it's allowed to do.
 
 Most failed GenAI projects don't fail because the model is bad. They fail because nobody planned for reliability, evaluation, and real users.
 
