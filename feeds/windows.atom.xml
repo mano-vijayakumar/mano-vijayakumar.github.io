@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mano - Windows</title><link href="https://mano-vijayakumar.github.io/" rel="alternate"/><link href="https://mano-vijayakumar.github.io/feeds/windows.atom.xml" rel="self"/><id>https://mano-vijayakumar.github.io/</id><updated>2026-04-11T00:00:00+05:30</updated><entry><title>Missing ZIP Option in Windows Right-Click Menu — Here's How to Fix It</title><link href="https://mano-vijayakumar.github.io/missing-zip-option-windows-right-click-menu.html" rel="alternate"/><published>2026-04-11T00:00:00+05:30</published><updated>2026-04-11T00:00:00+05:30</updated><author><name>Mano</name></author><id>tag:mano-vijayakumar.github.io,2026-04-11:/missing-zip-option-windows-right-click-menu.html</id><summary type="html">&lt;p&gt;The classic "Send to → Compressed (zipped) folder" option sometimes disappears from the Windows right-click context menu. Here's what causes it and how to get it back in under two minutes.&lt;/p&gt;
+&lt;h2&gt;What Happened&lt;/h2&gt;
+&lt;p&gt;Windows ships with a built-in ZIP shell extension handled by &lt;code&gt;zipfldr.dll&lt;/code&gt;. When third-party tools like Git, VLC …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The classic "Send to → Compressed (zipped) folder" option sometimes disappears from the Windows right-click context menu. Here's what causes it and how to get it back in under two minutes.&lt;/p&gt;
+&lt;h2&gt;What Happened&lt;/h2&gt;
+&lt;p&gt;Windows ships with a built-in ZIP shell extension handled by &lt;code&gt;zipfldr.dll&lt;/code&gt;. When third-party tools like Git, VLC, or OneDrive add their own context menu entries, they can displace or corrupt the ZIP handler registration — leaving you with a bloated menu but no ZIP option.&lt;/p&gt;
+&lt;h2&gt;Fix 1 — Check the Send to Submenu&lt;/h2&gt;
+&lt;p&gt;Before anything else, right-click your folder or file and hover over &lt;strong&gt;Send to →&lt;/strong&gt;. The "Compressed (zipped) folder" option is sometimes hiding in the submenu even when it's not visible at the top level.&lt;/p&gt;
+&lt;h2&gt;Fix 2 — Re-register the ZIP Shell Extension&lt;/h2&gt;
+&lt;p&gt;Open Command Prompt as Administrator and run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;regsvr32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zipfldr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dll&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This re-registers the native ZIP handler with Windows Shell. Restart Explorer or reboot after running it.&lt;/p&gt;
+&lt;h2&gt;Fix 3 — Restart Windows Explorer&lt;/h2&gt;
+&lt;p&gt;Sometimes a stale shell session is all that's causing the issue. Run this in CMD:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;taskkill /f /im explorer.exe
+start explorer.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Fix 4 — Verify the Registry Key&lt;/h2&gt;
+&lt;p&gt;Press &lt;code&gt;Win + R&lt;/code&gt;, type &lt;code&gt;regedit&lt;/code&gt;, and navigate to:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;HKEY_CLASSES_ROOT\CompressedFolder
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If this key is missing or corrupted, the ZIP option will not appear anywhere in the context menu. You may need to restore it from another machine or via a &lt;code&gt;.reg&lt;/code&gt; export.&lt;/p&gt;
+&lt;h2&gt;Root Cause&lt;/h2&gt;
+&lt;p&gt;Heavy context menu contributors — Git Bash, Git GUI, VLC, SkyDrive Pro — are visible in the screenshot. Any one of them can push a bad shell extension that breaks ZIP registration as a side effect. Fix 2 resolves this in most cases.&lt;/p&gt;</content><category term="Windows"/><category term="Windows"/><category term="tips"/><category term="context-menu"/><category term="troubleshooting"/><category term="productivity"/></entry></feed>

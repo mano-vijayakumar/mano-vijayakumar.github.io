@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://mano-vijayakumar.github.io/theme/stylesheet/style.min.css">
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="https://mano-vijayakumar.github.io/theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="https://mano-vijayakumar.github.io/theme/pygments/native.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="https://mano-vijayakumar.github.io/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://mano-vijayakumar.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://mano-vijayakumar.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://mano-vijayakumar.github.io/theme/font-awesome/css/solid.css">
+
+
+
+
+  <link href="https://mano-vijayakumar.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mano Atom">
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="Mano" />
+<meta name="description" content="Building reliable AI agents isn&#39;t just about picking the right model — it&#39;s about the patterns you wire around it. Here&#39;s a concise reference of 15 agentic system design concepts worth knowing. Two lines each — just enough to understand what they do and why they matter. Resilience &amp; Failure Isolation Agent Circuit …" />
+<meta name="keywords" content="GenAI, AI-agents, LLM, agentic-systems, design-patterns, reliability">
+
+
+  <meta property="og:site_name" content="Mano"/>
+  <meta property="og:title" content="Agentic System Design Concepts - Patterns Every AI Engineer Should Know"/>
+  <meta property="og:description" content="Building reliable AI agents isn&#39;t just about picking the right model — it&#39;s about the patterns you wire around it. Here&#39;s a concise reference of 15 agentic system design concepts worth knowing. Two lines each — just enough to understand what they do and why they matter. Resilience &amp; Failure Isolation Agent Circuit …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://mano-vijayakumar.github.io/agentic-system-design-concepts-patterns-every-ai-engineer-should-know.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2026-04-11 00:00:00+05:30"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://mano-vijayakumar.github.io/author/mano.html">
+  <meta property="article:section" content="GenAI"/>
+  <meta property="article:tag" content="GenAI"/>
+  <meta property="article:tag" content="AI-agents"/>
+  <meta property="article:tag" content="LLM"/>
+  <meta property="article:tag" content="agentic-systems"/>
+  <meta property="article:tag" content="design-patterns"/>
+  <meta property="article:tag" content="reliability"/>
+  <meta property="og:image" content="/images/csp.jpeg">
+
+  <title>Mano &ndash; Agentic System Design Concepts - Patterns Every AI Engineer Should Know</title>
+
+
+</head>
+<body >
+
+<aside>
+  <div>
+    <a href="https://mano-vijayakumar.github.io/">
+      <img src="/images/csp.jpeg" alt="Mano" title="Mano">
+    </a>
+
+    <h1>
+      <a href="https://mano-vijayakumar.github.io/">Mano</a>
+    </h1>
+
+
+
+
+    <nav>
+      <ul class="list">
+
+          <li>
+            <a target="_self"
+               href="https://mano-vijayakumar.github.io/pages/about.html">
+              About
+            </a>
+          </li>
+      </ul>
+    </nav>
+
+
+    <ul class="social">
+      <li>
+        <a class="sc-github"
+           href="https://github.com/mano-vijayakumar/manovijayakumar.github.io"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-linkedin"
+           href="www.linkedin.com/in/mano-vijayakumar"
+           target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-substack"
+style="background-color:#ff6719"           href="https://articlevil.substack.com/"
+           target="_blank">
+          <img class="social-icon-svg" src="https://mano-vijayakumar.github.io/theme/img/social/substack.svg" alt="Substack" />
+        </a>
+      </li>
+      <li>
+        <a class="sc-python"
+style="background-color:#ffd343"           href="https://rajacsp.github.io/mlnotes/"
+           target="_blank">
+          <img class="social-icon-svg" src="https://mano-vijayakumar.github.io/theme/img/social/python.svg" alt="Python" />
+        </a>
+      </li>
+    </ul>
+
+    <nav class="sidebar-menu">
+      <ul class="list">
+        <li><a href="https://mano-vijayakumar.github.io/">Home</a></li>
+          <li><a href="/archives.html">Archives</a></li>
+          <li><a href="/categories.html">Categories</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</aside>
+  <main>
+
+
+<div class="index-layout">
+<div class="index-main">
+<article class="single">
+  <header>
+      
+    <br/>
+    <h1 id="agentic-system-design-concepts-patterns-every-ai-engineer-should-know">Agentic System Design Concepts - Patterns Every AI Engineer Should Know</h1>
+    <p>
+      Posted on Sat 11 April 2026 in <a href="https://mano-vijayakumar.github.io/category/genai.html">GenAI</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Building reliable AI agents isn't just about picking the right model — it's about the patterns you wire around it. Here's a concise reference of 15 agentic system design concepts worth knowing. Two lines each — just enough to understand what they do and why they matter.</p>
+<h2>Resilience &amp; Failure Isolation</h2>
+<p><strong>Agent Circuit Breaker</strong> — Prevents cascading failures by halting agent execution when downstream services or tools are repeatedly failing. Borrowed from distributed systems engineering, it stops a single broken tool from dragging the entire agent pipeline down.</p>
+<p><strong>Blast Radius Limiter</strong> — Restricts the impact of an agent failure to a defined scope so it can't propagate across the system. Think of it as a blast door: when something goes wrong, the damage stays local.</p>
+<p><strong>Dead Letter Queue for Agents</strong> — A holding area where failed or unprocessable agent tasks are parked for later inspection instead of silently dropped. It gives you a recoverable audit trail when tasks fall through the cracks at runtime.</p>
+<h2>Control Flow &amp; Decision Quality</h2>
+<p><strong>Orchestrator vs Choreography</strong> — Defines whether agent interactions are centrally directed (orchestrator controls all moves) or emergent (agents react to events and coordinate peer-to-peer). The choice shapes coupling, debuggability, and how gracefully the system degrades.</p>
+<p><strong>Confidence Threshold Gate</strong> — Ensures an agent only takes action when its internal confidence in a decision clears a defined threshold. A simple but powerful reliability lever: low-confidence branches pause for human review rather than guessing forward.</p>
+<p><strong>Replanning Loop</strong> — Allows agents to re-evaluate their plan mid-execution when context changes or a step fails, rather than continuing blindly on a stale plan. Essential for long-horizon tasks where the environment isn't static.</p>
+<p><strong>Human Escalation Protocol</strong> — Provides a structured mechanism for agents to hand off to a human when they're stuck, uncertain, or handling high-stakes decisions. It's not a failure mode — it's a designed off-ramp.</p>
+<h2>Tool Invocation Reliability</h2>
+<p><strong>Idempotent Tool Calls</strong> — Ensures that a tool can be called multiple times with the same inputs without producing unintended side effects. Critical in agentic pipelines where retries happen frequently due to timeouts or partial failures.</p>
+<p><strong>Tool Invocation Timeout</strong> — Prevents agents from blocking indefinitely on a tool that is slow or unresponsive, forcing a graceful fallback or retry. Without this, a single flaky API can freeze an entire agent run.</p>
+<p><strong>Context Window Checkpointing</strong> — Periodically saves the agent's progress so it can resume from a known-good state rather than restarting from scratch after a context overflow or crash. Especially important for long-running, multi-step tasks.</p>
+<h2>Infrastructure &amp; Routing</h2>
+<p><strong>LLM Gateway Pattern</strong> — A single abstraction layer that manages all LLM API calls, handling routing, rate limiting, retries, and observability in one place. It decouples agent logic from model-specific SDKs, making provider swaps painless.</p>
+<p><strong>Semantic Caching</strong> — Stores LLM responses keyed on semantic meaning rather than exact input strings, so similar queries hit the cache even when phrased differently. Reduces latency and cost without sacrificing answer quality.</p>
+<p><strong>Multi-Agent State Sync</strong> — Maintains a consistent shared state across multiple agents working in parallel or in sequence. Without it, agents operating on stale or divergent state produce contradictory or redundant outputs.</p>
+<h2>Observability &amp; Deployment</h2>
+<p><strong>Agentic Observability Tracing</strong> — Tracks every decision, tool call, handoff, and LLM interaction across an agent run, producing a full execution trace for debugging and performance analysis. The difference between guessing why something failed and knowing.</p>
+<p><strong>Canary Agent Deployment</strong> — Rolls out a new agent version to a small slice of production traffic before full release, allowing you to compare behavior and catch regressions with limited blast radius. Applies standard software deployment discipline to the agent layer.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://mano-vijayakumar.github.io/tag/genai.html">GenAI</a>
+      <a href="https://mano-vijayakumar.github.io/tag/ai-agents.html">AI-agents</a>
+      <a href="https://mano-vijayakumar.github.io/tag/llm.html">LLM</a>
+      <a href="https://mano-vijayakumar.github.io/tag/agentic-systems.html">agentic-systems</a>
+      <a href="https://mano-vijayakumar.github.io/tag/design-patterns.html">design-patterns</a>
+      <a href="https://mano-vijayakumar.github.io/tag/reliability.html">reliability</a>
+    </p>
+  </div>
+
+
+
+
+
+
+
+</article>
+</div>
+<aside class="index-archive" aria-label="Archives">
+  <h3 class="index-archive-title">Archives</h3>
+  <div class="archive-tree">
+    <details class="archive-year" open>
+      <summary>
+        <span class="archive-label">2026</span>
+        <span class="archive-count">6</span>
+      </summary>
+
+      <details class="archive-month">
+        <summary>
+          <span class="archive-label">November</span>
+          <span class="archive-count">1</span>
+        </summary>
+        <ul class="archive-posts">
+          <li>
+            <span class="archive-day">07</span>
+            <a href="https://mano-vijayakumar.github.io/from-prompts-to-products-beginners-guide-generative-ai.html">From Prompts to Products: A Beginner's Guide to Generative AI</a>
+          </li>
+        </ul>
+      </details>
+      <details class="archive-month">
+        <summary>
+          <span class="archive-label">April</span>
+          <span class="archive-count">4</span>
+        </summary>
+        <ul class="archive-posts">
+          <li>
+            <span class="archive-day">11</span>
+            <a href="https://mano-vijayakumar.github.io/agentic-system-design-concepts-patterns-every-ai-engineer-should-know.html">Agentic System Design Concepts - Patterns Every AI Engineer Should Know</a>
+          </li>
+          <li>
+            <span class="archive-day">11</span>
+            <a href="https://mano-vijayakumar.github.io/every-claude-code-concept-you-need-to-know.html">Every Claude Code Concept You Need to Know</a>
+          </li>
+          <li>
+            <span class="archive-day">11</span>
+            <a href="https://mano-vijayakumar.github.io/missing-zip-option-windows-right-click-menu.html">Missing ZIP Option in Windows Right-Click Menu — Here's How to Fix It</a>
+          </li>
+          <li>
+            <span class="archive-day">10</span>
+            <a href="https://mano-vijayakumar.github.io/ai-agent-directory-few-shots-llm-models.html">AI Agent Directory - Few Shots LLM Models</a>
+          </li>
+        </ul>
+      </details>
+      <details class="archive-month">
+        <summary>
+          <span class="archive-label">January</span>
+          <span class="archive-count">1</span>
+        </summary>
+        <ul class="archive-posts">
+          <li>
+            <span class="archive-day">10</span>
+            <a href="https://mano-vijayakumar.github.io/my-genai-blogs.html">My GenAI Blogs</a>
+          </li>
+        </ul>
+      </details>
+    </details>
+  </div>
+</aside>
+</div>
+<footer>
+<p>&copy; 2026 Mano</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a>
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="https://mano-vijayakumar.github.io/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Mano ",
+  "url" : "https://mano-vijayakumar.github.io",
+  "image": "/images/csp.jpeg",
+  "description": ""
+}
+</script>
+<style>
+  .index-layout { display: flex; gap: 2rem; align-items: flex-start; }
+  .index-main { flex: 1 1 auto; min-width: 0; }
+  .index-archive {
+    flex: 0 0 340px;
+    position: sticky;
+    top: 1.5rem;
+    font-size: 0.9rem;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+  }
+  .index-archive-title {
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.85;
+  }
+
+
+  /* Hide the right widget on narrower screens; the Archives page still exists. */
+  @media (max-width: 1100px) {
+    .index-archive { display: none; }
+    .index-layout { display: block; }
+  }
+
+  .archive-tree details.archive-year { margin-bottom: 0.25rem; }
+  .archive-tree details.archive-year > summary { font-weight: 700; padding: 0.3rem 0; }
+  .archive-tree details.archive-month { margin: 0.1rem 0 0.1rem 1rem; }
+  .archive-tree details.archive-month > summary { font-weight: 600; padding: 0.25rem 0; opacity: 0.9; }
+
+  .archive-tree summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .archive-tree summary::-webkit-details-marker { display: none; }
+  .archive-tree summary::before {
+    content: "\25B6";
+    font-size: 0.65em;
+    transition: transform 0.15s ease;
+    opacity: 0.55;
+  }
+  .archive-tree details[open] > summary::before { transform: rotate(90deg); }
+
+  .archive-tree .archive-count {
+    font-size: 0.7em;
+    font-weight: 400;
+    opacity: 0.6;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    padding: 0 0.5em;
+  }
+
+  .archive-tree ul.archive-posts {
+    list-style: none;
+    margin: 0.2rem 0 0.4rem 1.9rem;
+    padding: 0;
+  }
+  .archive-tree ul.archive-posts li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.1rem 0;
+  }
+  .archive-tree ul.archive-posts .archive-day {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    min-width: 1.3rem;
+  }
+</style></body>
+</html>
